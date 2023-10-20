@@ -132,101 +132,70 @@ Create VM1 and VM2
 </p>
 <br />
 
+<h3>Observe SSH Traffic</h3>
+
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1440" alt="Screen Shot 2023-10-19 at 8 31 49 PM" src="https://github.com/Wilsielouidor/azure-network-protocols/assets/142513380/893343ae-4d74-4c03-86fb-5ea48f56ea11">
 </p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+
+<p><img width="1440" alt="Screen Shot 2023-10-19 at 8 32 41 PM" src="https://github.com/Wilsielouidor/azure-network-protocols/assets/142513380/23e2a6ac-8714-4bf5-8dab-204b7df9779b">
 </p>
 <br />
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<p><img width="1440" alt="Screen Shot 2023-10-19 at 9 10 49 PM" src="https://github.com/Wilsielouidor/azure-network-protocols/assets/142513380/c088a669-e984-4070-847b-fbe6f8a9264b">
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  <ul>
+<li>Back in Wireshark, filter for SSH traffic only</li>
+<li>From your Windows 10 VM, “SSH into” your Ubuntu Virtual Machine (via its private IP address)</li>
+  <ul>
+    <li>In the powershell command line type in ssh username@private ip adress of Ubuntu Virtual Machine 2->press enter</li>
+    <li> Example: ssh wlabuser@10.0.0.5</li>
+    <li>Type in yes for fingerprint to put in password next</li>
+    <li> Warning! When typing in the password you won't be able to see what you type just continue without making any mistakes</li>
+  </ul>
+<li>Type commands (username, pwd, etc) into the linux SSH connection and observe SSH traffic spam in WireShark</li>
+<li>Exit the SSH connection by typing ‘exit’ and pressing [Enter]</li>
+  </ul>
+
+</p>
+<br />
+<h3>Observe DHCP Traffic </h3>
+<p>
+<img width="1038" alt="Screen Shot 2023-10-19 at 9 15 04 PM" src="https://github.com/Wilsielouidor/azure-network-protocols/assets/142513380/b2627523-d223-49e4-b776-faed6c809719">
+</p>
+<p>
+  <ul>
+<li>Back in Wireshark, filter for DHCP traffic only</li>
+<li>From your Windows 10 VM, attempt to issue your VM a new IP address from the command line (ipconfig /renew)</li>
+<li>Observe the DHCP traffic appearing in WireShark</li> 
+  </ul>
+</p>
+<br />
+<h3>Observe DNS Traffic</h3>
+<p>
+<img width="1372" alt="Screen Shot 2023-10-19 at 9 18 11 PM" src="https://github.com/Wilsielouidor/azure-network-protocols/assets/142513380/bdd8578b-b79a-4cf4-bce3-31865a3491d3">
+</p>
+<p>
+<ul>
+  <li>Back in Wireshark, filter for DNS traffic only</li>
+<li>From your Windows 10 VM within a command line, use nslookup to see what google.com, instagram.com, and disney.com’s IP addresses are</li>
+<li>Observe the DNS traffic being show in WireShark</li>
+</ul>
 </p>
 <br />
 
+<h3> Observe RDP Traffic</h3>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1440" alt="Screen Shot 2023-10-19 at 9 19 14 PM" src="https://github.com/Wilsielouidor/azure-network-protocols/assets/142513380/99a9f09b-b5be-4804-a455-a3f96bd282da">
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  <ul>
+<li>Back in Wireshark, filter for RDP traffic only (tcp.port == 3389)</li>
+<li>Observe the immediate non-stop spam of traffic</li>
+  </ul>
 </p>
 <br />
 
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
