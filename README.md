@@ -181,7 +181,7 @@ Create VM1 and VM2
 <ul>
   <li>Back in Wireshark, filter for DNS traffic only</li>
 <li>From your Windows 10 VM within a command line, use nslookup to see what google.com, instagram.com, and disney.com’s IP addresses are</li>
-<li>Observe the DNS traffic being show in WireShark</li>
+<li>Observe the DNS traffic being shown in WireShark</li>
 </ul>
 </p>
 <br />
