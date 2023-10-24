@@ -1,4 +1,4 @@
-<p align="center">
+   <p align="center">
 <img src="https://i.imgur.com/Ua7udoS.png" alt="Traffic Examination"/>
 </p>
 
@@ -147,7 +147,9 @@ Create VM1 and VM2
 <li>From your Windows 10 VM, “SSH into” your Ubuntu Virtual Machine (via its private IP address)</li>
   <ul>
     <li>In the powershell command line type in ssh username@private ip adress of Ubuntu Virtual Machine 2->press enter</li>
+    <ul>
     <li> Example: ssh wlabuser@10.0.0.5</li>
+    </ul>
     <li>Type in yes for fingerprint to put in password next</li>
     <li> Warning! When typing in the password you won't be able to see what you type just continue without making any mistakes</li>
   </ul>
